@@ -2,9 +2,9 @@
 layout: post
 title:  "欢迎来到我的博客！"
 date:   2017-09-05 14:10:51 +0800
-categories: Jekyll
-tags: Jekyll
-description: This is just another copy of the read me page of Jekyll.
+categories: 第一篇
+tags: 第一篇
+description: 这是我的第一篇博客.
 ---
 # [Jekyll](https://jekyllrb.com/)
 
