@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Another copy of the Readme of Jekyll!"
+title:  "欢迎来到我的博客！"
 date:   2017-09-05 14:10:51 +0800
 categories: Jekyll
 tags: Jekyll
