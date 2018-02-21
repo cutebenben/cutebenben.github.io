@@ -6,5 +6,5 @@ categories: Jekyll
 tags: Jekyll
 description: A simple example post page generate by Jekyll.
 ---
-[]: 
+
 
