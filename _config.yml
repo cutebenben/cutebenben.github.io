@@ -1,7 +1,7 @@
 # Jekyll configuration
 
 name: wArrest
-description: Welcome to wArrest！
+description: 欢迎来到我的博客
 
 # url is currently only used only for the RSS feed in feed.xml
 url: https://github.com/wArrest/wArrest.github.io
