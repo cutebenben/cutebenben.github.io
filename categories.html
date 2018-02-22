@@ -5,15 +5,15 @@ layout: default
 
 {% include header.html %}
 
-<div class="g-banner categories-banner {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }}" data-theme="{{ site.theme-color }}">
-    <h2>categories</h2>
+<div class="g-banner tags-banner {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }}" data-theme="{{ site.theme-color }}">
+    <h2>SERIES</h2>
 </div>
 
-<main class="categories-content">
+<main class="tags-content">
 
-    <ul class="categories-list">
+    <ul class="tags-list">
         <li>
-        {% if site.recommend-categories and site.categories.size>0 %}
+        {% if site.recommend-tags and site.categories.size>0 %}
             {% for tag in site.categories %}
             <a href="#{{ tag[0] }}" class="tag">{{ tag[0]}}</a>
             {% endfor %}
@@ -28,7 +28,7 @@ layout: default
         </li>
         
         {% endfor%}
-    </ul>
+  </ul>
 </main>
     
 {% include footer.html %}
