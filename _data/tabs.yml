@@ -4,7 +4,7 @@
 - id: tab-test
   name: work
   fp: tab/test.html
-  disabled: false
+  disabled: true
 
 - id: tab-test1
   name: log
