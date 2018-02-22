@@ -4,7 +4,7 @@ title: 'AJAX+ThinkPHP实现选择题批改'
 subtitle: 'AJAX+ThinkPHP实现选择题批改'
 date: 2018-01-19
 categories: 技术
-cover: 'https://warrest.github.io/wArrest.github.io/assets/testdemo/TIM截图20180118103439.png'
+cover: 'https://warrest.github.io/wArrest.github.io/assets/phpFrame/u=228695038,594732975&fm=27&gp=0.jpg'
 tags: AJAX ThinkPHP jq
 ---
 
