@@ -21,9 +21,9 @@ tags: AJAX ThinkPHP jq
 
 **question表**：![TIM截图20180118100240](\assets\img\testdemo\TIM截图20180118100240.png)
 
-user表：![TIM截图20180118100316](\img\testdemo\TIM截图20180118100316.png)
+user表：![TIM截图20180118100316](\assets\img\testdemo\TIM截图20180118100316.png)
 
-user-test表（存放对应用户，对应用户的十道题目，也就是保存用户的试卷表）![TIM截图20180118100339](\img\testdemo\TIM截图20180118100339.png)
+user-test表（存放对应用户，对应用户的十道题目，也就是保存用户的试卷表）![TIM截图20180118100339](\assets\img\testdemo\TIM截图20180118100339.png)
 
 第一步，用户登录：
 
@@ -98,7 +98,7 @@ public function question(){
 
 如图：
 
-![TIM截图20180118102026](\img\testdemo\TIM截图20180118102026.png)
+![TIM截图20180118102026](\assets\img\testdemo\TIM截图20180118102026.png)
 
 res字段现在是空的也就用户还没有完成题目
 
@@ -226,8 +226,8 @@ public function res(){
 
 点击提交就ok了，之后完善的话一个用户考完试就不能进入考试页面，需要给一个状态字段，就可以实现，这里就不详述了。
 
-![TIM截图20180118103408](\img\testdemo\TIM截图20180118103408.png)
+![TIM截图20180118103408](\assets\img\testdemo\TIM截图20180118103408.png)
 
-![TIM截图20180118103439](\img\testdemo\TIM截图20180118103439.png)
+![TIM截图20180118103439](\assets\img\testdemo\TIM截图20180118103439.png)
 
 在线的例子改天上传，阿里云的备案一直过不了，很烦。
