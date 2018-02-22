@@ -10,7 +10,7 @@ baseurl: '/wArrest.github.io'
 # Navigation links
 nav:
   首页: '/'
-  归档: '/archives.html'
+  归档: '/categories.html'
   标签: '/tags.html'
 
 # Footer
