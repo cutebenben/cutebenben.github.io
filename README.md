@@ -1,54 +1,54 @@
-Jekyll Xixia
-============
+# YellowBlue theme
 
-* Get it from [github](https://github.com/zxixia/jekyll-xixia).
-* See the [live demo](http://zxixia.github.io/jekyll-xixia/).
-* See it [in action on my own blog](http://xixia.info/).
+## Yellowblue: A free responsive Jekyll theme
 
-A simple and clean Jekyll theme using [bootstrap](http://getbootstrap.com)
-(not to be confused with jekyll-bootstrap) that's easy to modify and very
-modular in component and element reuse.
+Yellowblue is a clean, modern, customizable, responsive blog theme, built for Jekyll, the most popular static site generator.
 
-The theme works well on mobile phones, using a collapsable nav bar and hiding the
-sidebar. The links pane in the sidebar is available on mobile through the nav menu,
-and you can do the same thing for any other sections added to the sidebar.
+### [Demo](http://chalatz.github.io/yellowblue/)
 
-Don't forget to occassionally merge against my upstream repository so you can get
-the latest changes. Pull requests are encouraged and accepted!
+### Features
 
-Preview
-=======
-![Xixia](/assets/images/preview.png)
+- Clean and modern design
+- Fully responsive, built using the 'Mobile First' technique
+- No installation needed. Just download, extract and you're good to go
+- Custom and simple grid system
+- Rich and stylish Pattern Library
+- 451 SVG icons (from [Icomoon](https://icomoon.io))
+- Syntax highlighting (with [Prism](http://prismjs.com) )
+- Subtle animations
+- Categories (no extra plugins required)
+- Tags (no extra plugins required)
+- Hero images
+- Pagination
+- Comments (enable / disable them at your own will, globally or per post) - from [Disqus](https://disqus.com/)
+- Contact form (with [Formspree](https://formspree.io/))
+- Archives page (organized by publishing date)
+- Custom 404 page
+- Detailed and thorough documentation
+- Detailed auto-generated sitemap.xml
+- Real world articles
+- Distraction-free reading. The sidebar goes to the bottom while on posts and pages.
+- 4 additional color scheme presets. Apply them by changing a single word in the code.
+- By the power of Sass variables, you can apply your own color schemes.
+- Github Pages ready. No extra plugins are installed
 
-License
-=======
+#### [Read the documentation online](http://chalatz.github.io/yellowblue-docs/)
 
-The content of this theme is distributed and licensed under a
-![License Badge](assets/images/cc_by_88x31.png)
-[Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
+### Credits
 
-    This license lets others distribute, remix, tweak, and build upon your work,
-    even commercially, as long as they credit you for the original creation. This
-    is the most accommodating of licenses offered. Recommended for maximum
-    dissemination and use of licensed materials.
+Yellowblue uses some excellent open source tools, libraries and assets, as well as a couple of services. Thank you all!
 
-In other words: you can do anything you want with this theme on any site, just please
-provide a link to [the original theme on github](https://github.com/zxixia/jekyll-xixia)
-so I get credit for the original design. Beyond that, have at it!
+- Sample images: [Gratisography](http://www.gratisography.com/)
+- Icons: [Icomoon](https://icomoon.io/)
+- Font: Open Sans from [Google Fonts](https://www.google.com/fonts)
+- [normalize.css](https://necolas.github.io/normalize.css/)
+- [Pure.css](http://purecss.io/)
+- [Animate.css](https://daneden.github.io/animate.css/)
+- [jQuery](https://jquery.com/)
+- [Fluidbox](https://github.com/terrymun/Fluidbox)
+- [Prism](http://prismjs.com/)
+- [scrollReveal.js](http://scrollrevealjs.org/)
+- [Formspree](https://formspree.io/)
+- [Disqus](https://disqus.com/)
 
-Thanks
-======
-
-1，[Jekyll][jekyll-url]
-
-2，[Bootstrap][bootstrap-url]
-
-3，[Github][github-url]
-
-4，[Jekyll Clean Theme][Jekyll-Clean-Theme-url]
-
-[jekyll-url]: http://jekyllrb.com/
-[bootstrap-url]: http://getbootstrap.com/
-[github-url]: https://github.com/
-[Jekyll-Clean-Theme-url]: https://github.com/scotte/jekyll-clean
-[xixia-url]: http://xixia.info/
+Made by [Christos Alatzas](https://twitter.com/chalatz)
