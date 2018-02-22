@@ -1,81 +1,54 @@
-Materialize - jekyll
-==============
+# YellowBlue theme
 
+## Yellowblue: A free responsive Jekyll theme
 
-## Introducton
+Yellowblue is a clean, modern, customizable, responsive blog theme, built for Jekyll, the most popular static site generator.
 
-This jekyll theme is based on [materialize](http://materializecss.com).
-(NOTE: this theme is only made for my own, but you can modify it freely.)
+### [Demo](http://chalatz.github.io/yellowblue/)
 
-[Open demo](https://mumuxme.github.io/materialize-jekyll/)
+### Features
 
+- Clean and modern design
+- Fully responsive, built using the 'Mobile First' technique
+- No installation needed. Just download, extract and you're good to go
+- Custom and simple grid system
+- Rich and stylish Pattern Library
+- 451 SVG icons (from [Icomoon](https://icomoon.io))
+- Syntax highlighting (with [Prism](http://prismjs.com) )
+- Subtle animations
+- Categories (no extra plugins required)
+- Tags (no extra plugins required)
+- Hero images
+- Pagination
+- Comments (enable / disable them at your own will, globally or per post) - from [Disqus](https://disqus.com/)
+- Contact form (with [Formspree](https://formspree.io/))
+- Archives page (organized by publishing date)
+- Custom 404 page
+- Detailed and thorough documentation
+- Detailed auto-generated sitemap.xml
+- Real world articles
+- Distraction-free reading. The sidebar goes to the bottom while on posts and pages.
+- 4 additional color scheme presets. Apply them by changing a single word in the code.
+- By the power of Sass variables, you can apply your own color schemes.
+- Github Pages ready. No extra plugins are installed
 
-## Getting start
+#### [Read the documentation online](http://chalatz.github.io/yellowblue-docs/)
 
-#### Install
+### Credits
 
-You may need some dev headers, for debian/linux, just run:
+Yellowblue uses some excellent open source tools, libraries and assets, as well as a couple of services. Thank you all!
 
-```
-# apt-get install liblzma-dev zlib1g-dev
-```
+- Sample images: [Gratisography](http://www.gratisography.com/)
+- Icons: [Icomoon](https://icomoon.io/)
+- Font: Open Sans from [Google Fonts](https://www.google.com/fonts)
+- [normalize.css](https://necolas.github.io/normalize.css/)
+- [Pure.css](http://purecss.io/)
+- [Animate.css](https://daneden.github.io/animate.css/)
+- [jQuery](https://jquery.com/)
+- [Fluidbox](https://github.com/terrymun/Fluidbox)
+- [Prism](http://prismjs.com/)
+- [scrollReveal.js](http://scrollrevealjs.org/)
+- [Formspree](https://formspree.io/)
+- [Disqus](https://disqus.com/)
 
-(Other dependencies may also needed.)
-
-```
-$ git clone https://github.com/mumuxme/materialize-jekyll
-$ cd materialize-jekyll
-$ bundle install
-```
-
-#### Run
-
-1. Modify `_config.yml`, `about.md` and other(whatever you need).
-2. You can add a `favicon.ico` file in the project root directory.
-3. If you want to use google analytics, add your `google-analytics.js` into `js` directory.
-
-Then:
-
-```
-$ bundle exec jekyll s
-
-# or start with draft
-$ bundle exec jekyll s --drafts
-```
-
-## Or start with docker
-
-```
-cd materialize-jekyll
-
-# export GEM_MIRROR=mirror.https://rubygems.org
-export GEM_MIRROR='Your-ruby-gem-mirror'
-
-make build
-make run
-```
-
-
-## Other
-
-#### Emoji
-
-You can use GitHub-flavored emoji. See [emoji cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/)
-
-#### TODO
-
-- Add comment. (???)
-- Add options to choose self host or cdn.
-
-
-## License
-
-[GNU GPL v3](http://www.gnu.org/licenses/).
-
-Others:
-
-- jquery: <https://jquery.com>
-- materialize: <http://materializecss.com>
-- material-scrolltop: [bartholomej/material-scrolltop](https://github.com/bartholomej/material-scrolltop)
-- material design icon: [Templarian/MaterialDesign](https://github.com/Templarian/MaterialDesign) or <https://materialdesignicons.com/getting-started>
-- GitHub-flavored emoji plugin: [jemoji](https://github.com/jekyll/jemoji)
+Made by [Christos Alatzas](https://twitter.com/chalatz)
