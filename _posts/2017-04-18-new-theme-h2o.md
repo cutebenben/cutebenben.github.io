@@ -1,125 +1,233 @@
 ---
 layout: post
-title: 'H2O theme for Jekyll'
-subtitle: '或许是最漂亮的Jekyll主题'
-date: 2017-04-18
+title: 'AJAX+ThinkPHP实现选择题批改'
+subtitle: 'AJAX+ThinkPHP实现选择题批改'
+date: 2018-01-19
 categories: 技术
-cover: 'http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-postcover.jpg'
-tags: jekyll 前端开发 设计
+cover: 'https://warrest.github.io/wArrest.github.io/assets/testdemo/1.png'
+tags: AJAX ThinkPHP jq
 ---
 
-正如我在[微博](http://weibo.com/1374146504/profile?topnav=1&wvr=6)上所说的，使用[Jekyll](http://jekyll.com.cn/)半年以来一直没有令我满意的主题模板，所以开始计划自己写一套好看又好用的主题模板。设计之初就明确了极简主义，风格采用扁平化了，通过卡片式设计来进行区块分明的布局，参考了Medium的ui样式和知乎专栏的视觉风格。
+前几天，和好久不见的色鬼叙了叙旧，得知他正在做毕业设计，其中一个要实现的功能就是在线选择题批改，他说有点犯难，巧的是他正在学TP。正好我也学习了一个学期的TP，感觉这个功能还挺有趣的，就主动说帮忙写，其中碰到不少问题，不过最终还是解决了。
 
-## H2O
 
-[源码及使用文档 →](https://github.com/kaeyleo/jekyll-theme-H2O)
+### 功能简述：一个账户登录，随机从题库中抽取10道选择题，开始考试，提交，批改分数。
 
-![](http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-realhome.jpg)
 
-新主题名叫"H2O"，基于Jekyll 3.0.x（使用```gem update jekyll```升级Jekyll），Markdown的代码高亮不再支持pygments转而使用rouge，咱已经默认配置了 ```highlighter: rouge``` 。用到的技术栈也很简单：引入jQuery类库，使用Sass编写样式，使用Gulp来编译Sass、合并压缩css、js，开源在[Github](https://github.com/kaeyleo/jekyll-theme-H2O)上，稍作配置即可用于你的Jekyll博客上。
 
-![Design with Sketch](http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-sketchdesign.png)
+### 思路：
 
-使用Sketch完成H2O主题的原型设计
+1.首先准备三张表：
 
-![My Jekyll themes](http://on2171g4d.bkt.clouddn.com/jekyll-theme-vs.jpg)
+**question表**：![TIM截图20180118100240](\assets\img\testdemo\TIM截图20180118100240.png)
 
-比之前漂亮不少吧，下面聊聊H2O的新特性。
+user表：![TIM截图20180118100316](\img\testdemo\TIM截图20180118100316.png)
 
-## 新特性
+user-test表（存放对应用户，对应用户的十道题目，也就是保存用户的试卷表）![TIM截图20180118100339](\img\testdemo\TIM截图20180118100339.png)
 
-### 主题配色
+第一步，用户登录：
 
-支持两种主题配色——蓝色和粉色。
+index_index.html:
 
-![](https://github.com/kaeyleo/jekyll-theme-H2O/blob/master/screenshot/jekyll-theme-h2o-themecolor.jpg?raw=true)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{:U('Index/question')}" method="post">
+        账号<input type="text" name="email">
+        密码 <input type="password" name="password">
+        <input type="submit">
+    </form>
+</body>
 
-### 侧边栏
 
-相比自己上一个版本的博客主题，首页增加了侧边栏，方便展示博主的个人信息和文章标签。
-
-### 社交图标
-
-使用阿里的图标管理平台[Iconfont](http://iconfont.cn/)整理了一套<strike>墙内外</strike>常用的社交图标，包括微博、知乎、掘金、简书、Github等十多个网站，鼠标悬停会显示该站的主题色。
-
-![social iconfont](http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-snstext.jpg)
-
-### 前后文导航
-
-![Next post navigator](http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-nextpostnav.png)
-
-### 自定义文章封面
-
-在Markdown的[文章头信息](http://jekyll.com.cn/docs/frontmatter/)里添加cover参数来配置文章的封面图片，如果没有配置封面，则默认【主题色+底纹】的组合作为文章封面。值得一提的是，H2O有两种（粉、蓝）主题色和六种底纹（电路板、食物、云海、钻石等等）供你选择。
-
-### 头图个性化底纹
-
-在没有图片的情况下单纯显示颜色会不会太无趣了点？于是想到了加入底纹元素，底纹素材是SVG格式的（保存在css样式里），加载比图片快很多。
-
-![](http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-headerpatterns.jpg)
-
-### 代码高亮
-
-模板引入了[Prism.js](http://prismjs.com)，一款轻量、可扩展的代码语法高亮库。
-
-很多知名网站如[MDN](https://developer.mozilla.org/)、[css-tricks](https://css-tricks.com/)也在用它，JavaScript 之父 [Brendan Eich](https://brendaneich.com/) 也在个人博客上使用。
-
-![代码高亮](http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-highlight.png)
-
-遵循 [HTML5](https://www.w3.org/TR/html5/grouping-content.html#the-pre-element) 标准，Prism 使用语义化的 `<pre>` 元素和 `<code>` 元素来标记代码区块：
-
-```
-<pre><code class="language-css">p { color: red }</code></pre>
+</html>
 ```
 
-在Markdown中你可以这样写：
+账号密码POST传到控制器中的check方法
 
+```php
+public function question(){
+        $user=M('user');//实例化用户表
+        $question=M('question');//实例化题库表
+        $test=M('user-test');//实例化试卷表
+        //print_r($_POST);
+        if(isset($_POST)){   //如果接收到POST数据
+            $email=$_POST['email'];
+            $password=$_POST['password'];
+            $sql2="select password from user where email='".$email."'";
+            $rpassword=$user->query($sql2);
+            if($password==$rpassword['0']['password']) {//如果密码正确,执行以下操作
+                echo '<script>alert("密码正确!");</script>';
+                $sql = "select * from question order by rand() limit 10;";
+                $res1 = $question->query($sql);//随机取出10道题目
+                $sql1 = "select user_id from user where email='" . $email . "'";
+                $res2 = $user->query($sql1);//取出用户id，我这里直接又去user表查了一次，实际项目中可以直接调用session，获取用户id
+                for ($i = 0; $i < 10; $i++) {
+                    $data['qid'] = $res1[$i]['id'];
+                    $data['question'] = $res1[$i]['question'];
+                    $data['A'] = $res1[$i]['a'];
+                    $data['B'] = $res1[$i]['b'];
+                    $data['C'] = $res1[$i]['c'];
+                    $data['D'] = $res1[$i]['d'];
+                    $data['right'] = $res1[$i]['right'];
+                    $data['uid'] = $res2['0']['user_id'];
+                    $test->add($data);
+
+
+                }
+                //遍历存入user-test(试卷表)
+                echo "<script>window.location.href='http://localhost/test/index.php/home/index/content.html';</script>";//跳转到答题页面，这里也可以用TP的$this->redirect(）函数；
+
+            }else{
+                echo '<script>alert("密码错误！");history.go(-1);</script>';
+
+            }
+        }
+
+    }
 ```
- ```css
-	p { color: red }
- ```
+
+虽然说用了TP但是写法还是比较传统，应该有更简洁明了的写法，不过应该是比较容易看懂的
+
+带着一步位置，用户登录取出了10道题目，存入了试卷表：
+
+如图：
+
+![TIM截图20180118102026](\img\testdemo\TIM截图20180118102026.png)
+
+res字段现在是空的也就用户还没有完成题目
+
+第二部用户，进入答题页面：
+
+Index_content.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="__PUBLIC__/img/title/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/my.css">
+    <link rel="stylesheet" href="__PUBLIC__/font/font-awesome.min.css">
+
+    <title>文章分类</title>
+</head>
+<body>
+<div class="container">
+    <volist name="res" id="vo" key="k">
+        <h4>{$k}.{$vo.question}</h4>
+        <form action="__CONTROLLER__/check">
+            <label>A<input type="radio" name="{$vo.id}" value="A">{$vo.a}</label>&nbsp&nbsp&nbsp <br>
+            <label>B<input type="radio" name="{$vo.id}" value="B">{$vo.b}</label>&nbsp&nbsp&nbsp <br>
+            <label>C<input type="radio" name="{$vo.id}" value="C">{$vo.c}</label>&nbsp&nbsp&nbsp <br>
+            <label>D<input type="radio" name="{$vo.id}" value="D">{$vo.d}</label>&nbsp&nbsp&nbsp <br>
+
+        </form>
+        <br>
+    </volist>
+<button id="bt">交卷！</button>
+    <a href="__CONTROLLER__/res" ><button id="bt2" disabled>查看分数</button></a>
+</div>
+
+
+
+</body>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $('#bt').click(function () {
+        alert('提交成功！可查看分数');
+        $('input:checked').each(function () {
+            var fth=$(this);
+            $.ajax({
+                url:"__CONTROLLER__/res",
+                type:"POST",
+                data:{"id":this.name ,"res":fth.val()},
+                success:function (msg) {
+
+
+                }
+            });
+
+        });
+    });
+    $('#bt').click(function(){
+        //逻辑........
+        setDisable();
+    });
+
+    function setDisable ()
+    {
+        setTimeout(function(){
+            //10秒后移除第二个按钮disabled属性
+            $('#bt2').removeAttr("disabled");
+        },2000);
+    }
+</script>
+<script src="__PUBLIC__/js/slider.js" type="text/javascript"></script>
+</html>
 ```
 
-支持语言：
+打印题目：
 
-- HTML
-- CSS
-- Sass
-- JavaScript
-- CoffeeScript
-- Java
-- C-like
-- Swift
-- PHP
-- Go
-- Python
+```php
+public function content(){
+        $test=M('user-test');
+        $res=$test->select();
+        $this->assign('res',$res);
+        $this->display();
+    }
+```
 
-### 第三方评论
+Ajax获取数据将答案传到，更新了对应试卷表（user-test）的res字段
 
-由于多说关闭，又对国内其他第三方评论插件无感，所以将[Disqus](https://disqus.com/)列为首选（目前模板也只提供了这个），请自备梯子。
+接收答案,更新res字段
 
-### 移动端优化
+```php
+public function res(){
+        $test=M('user-test');
+        $test->res = $_POST['res'];
+        $test->where('id='.$_POST['id'])->save();
 
-响应式设计，对手机和平板等移动设备做了优化。
+    }
+```
 
-![](http://on2171g4d.bkt.clouddn.com/jekyll-theme-h2o-realm.png)
+批改
 
-### 关于阅读体验
+```php
+public function res(){
+        $test=M('user-test');
+        $res=$test->select();
+        $sum=0;
+        for($i=0;$i<sizeof($res);$i++){
 
-我认为在内容质量相同的情况下，出色的沉浸式阅读体验是博客的核心。
+            if($res[$i]['res']==$res[$i]['right']){
+                $sum=$sum+10;
+            }
+        }
+        if($sum>=60){
+            echo '<h1 style="text-align:center; margin-top: 10%;">恭喜你及格了！你的分数为：'.$sum.'分</h1>';
+        }else{
+            echo '<h1 style="text-align: center;margin-top: 10%;">你的分数为:<font color="red">'.$sum.'</font>分再接再厉！</h1>';
+        }
 
-H2O在这方面还有很多需要完善的地方，比如：<strike>代码高亮</strike>、夜间模式、查看大图...
+        $this->display();
+    }
+```
 
-### 其他特性：
+点击提交就ok了，之后完善的话一个用户考完试就不能进入考试页面，需要给一个状态字段，就可以实现，这里就不详述了。
 
-- 网页标题SEO优化
-- 标签索引，点击标签跳转到标签目录，即可查看对应的全部文章
-- 漂亮
-- 好看
-- 美
+![TIM截图20180118103408](\img\testdemo\TIM截图20180118103408.png)
 
-## 最后
+![TIM截图20180118103439](\img\testdemo\TIM截图20180118103439.png)
 
-本想趁这次机会将整站https化的，但折腾了半天发现弹性web托管并不支持，所以暂时搁置https的想法。另外，博客统计工具一直使用的是[百度统计](https://tongji.baidu.com)，这次新增了Google Analytics。
-
-这次从0到1，独自设计、开发再到发布大约用了一周时间，也算完成一个小小的开源项目了，后续也将持续完善和更新，欢迎[Star](https://github.com/kaeyleo/jekyll-theme-H2O)。
+在线的例子改天上传，阿里云的备案一直过不了，很烦。
