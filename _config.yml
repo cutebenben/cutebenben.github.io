@@ -1,13 +1,13 @@
 # Site settings
 
-author: Yourname
-email: example@email.com
+author: wArrest
+email: 1275591716@qq.com
 twitter_username: twitter
 github_username:  github
 googleplus_username: google
 
-head-title: Your blog
-title: Your blog
+head-title: wArrest's Blog
+title: wArrest's Blog
 
 baseurl: "/wArrest.github.io"    # the subpath of your site, "/blog"
 url: ""
