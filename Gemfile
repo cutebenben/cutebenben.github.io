@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
-
-gem 'jekyll-watch'
+gem 'jekyll'
+gem 'nokogiri'
 gem 'jekyll-paginate'
-gem 'kramdown'
-gem 'wdm'
-gem 'github-pages'
+gem 'jekyll-last-modified-at'
+gem 'jemoji'

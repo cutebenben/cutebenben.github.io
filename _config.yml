@@ -1,28 +1,67 @@
 # Site settings
-title: Yellowblue - Responsive Jekyll Theme
-email: info@yellowblue.eu
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
 
+author: Yourname
+email: example@email.com
+twitter_username: twitter
+github_username:  github
+googleplus_username: google
+
+head-title: Your blog
+title: Your blog
+
+baseurl: "/materialize-jekyll"    # the subpath of your site, "/blog"
+url: ""
+
+# footer 
+description: "I know that what I'm doing looks stupid, but I'm a big boy and really want to do this."
+
+favo: "春梦随云散，飞花逐水流"
+descrpt: "“巧者劳而智者忧，无能者无所求，饱食而遨游，泛若不系之舟”  ——《南华经》"
+
+
+#
 # Build settings
+#
+
+#exclude: [vendor]
+
 markdown: kramdown
-kramdown:
-  input: GFM
-
-exclude: ['node_modules', 'Gruntfile.js', 'package.json']
-
 highlighter: rouge
 
-gems:
-   - jekyll-paginate
+kramdown:
+  input: GFM
+  hard_wrap: false
+  highlight: true
+  auto_ids:  true
 
-# YB Settings
-excerpt_separator: <!-- more -->
-paginate: 4
-comments: false
+sass:
+  style: compressed
+
+permalink: /posts/:categories/:title.html
+
+paginate: 7
+#paginate_path: 'page/:num'
+
+gems: [jekyll-paginate, jekyll-last-modified-at, jemoji]
+
+
+#
+# Custom
+#
+
+# Color
+# All css class, see: http://materializecss.com/color.html
+header-color: "indigo lighten-1"
+head-theme-color: "#5c6bc0"     # MUST in hex format, may the same as header-color. This color is for android chrome browser.
+
+footer-color: "indigo lighten-1"
+footer-button-color: "indigo lighten-2"
+footer-link-color: "red-text text-accent-1"
+
+share-button-color: "pink"
+share-button-small-color: ""
+
+
+##
+#excerpt_separator: <!-- excerpt_end -->       # for post.excerpt
+
