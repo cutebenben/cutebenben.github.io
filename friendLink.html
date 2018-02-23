@@ -1,28 +1,25 @@
 ---
-title: Logs
+title: 友情链接
 layout: default
 ---
 
 {% include header.html %}
 
 <div class="g-banner tags-banner {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }}" data-theme="{{ site.theme-color }}">
-    <h2>LOGS</h2>
+    <h2>TAGS</h2>
 </div>
 
 <main class="tags-content">
 
     <ul class="tags-list">
-       
-        {% for tag in logs %}
+        
         <li>
-            <span class="tag-name" id="{{ tag[0] }}">「{{ tag[0] }}」</span>
-            {% for post in tag[1] %}
-            <a class="tag-post" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-            {% endfor %}
+            
+            <a class="tag-post" href="https://xukimseven.github.io" title="鸡哥">「鸡哥的博客」</a>
         </li>
         
         {% endfor%}
-  </ul>
+    </ul>
 </main>
     
 {% include footer.html %}
