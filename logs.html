@@ -1,25 +1,25 @@
 ---
-title: log
+title: Logs
 layout: default
 ---
 
 {% include header.html %}
 
 <div class="g-banner tags-banner {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }}" data-theme="{{ site.theme-color }}">
-    <h2>LOGS</h2>
+    <h2>CATEGORIES</h2>
 </div>
 
 <main class="tags-content">
 
     <ul class="tags-list">
         <li>
-        {% if site.recommend-tags and site.tags.size>0 %}
-            {% for tag in site.tags %}
+        {% if site.recommend-tags and site.logs.size>0 %}
+            {% for tag in site.logs %}
             <a href="#{{ tag[0] }}" class="tag">{{ tag[0]}}</a>
             {% endfor %}
         {% endif %}
         </li>
-        {% for tag in site.tags %}
+        {% for tag in logs %}
         <li>
             <span class="tag-name" id="{{ tag[0] }}">「{{ tag[0] }}」</span>
             {% for post in tag[1] %}
@@ -28,7 +28,7 @@ layout: default
         </li>
         
         {% endfor%}
-    </ul>
+  </ul>
 </main>
     
 {% include footer.html %}
