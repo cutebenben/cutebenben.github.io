@@ -12,7 +12,7 @@ nav:
   首页: '/'
   关于: '/about.html'
   作品: '/work.html'
-  归档: '/classify.html'
+  归档: '/categories.html'
   标签: '/tags.html'
   友情链接: '/friendLink.html'
 
