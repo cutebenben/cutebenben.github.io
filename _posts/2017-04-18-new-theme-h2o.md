@@ -13,7 +13,8 @@ tags: AJAX ThinkPHP jq
 
 ### 功能简述：一个账户登录，随机从题库中抽取10道选择题，开始考试，提交，批改分数。
 
-
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=481535492&auto=1&height=66">
+</iframe>
 
 ### 思路：
 
