@@ -9,8 +9,10 @@ tags: AJAX ThinkPHP jq
 ---
 
 前几天，和好久不见的色鬼叙了叙旧，得知他正在做毕业设计，其中一个要实现的功能就是在线选择题批改，他说有点犯难，巧的是他正在学TP。正好我也学习了一个学期的TP，感觉这个功能还挺有趣的，就主动说帮忙写，其中碰到不少问题，不过最终还是解决了。
+<div>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=481535492&auto=1&height=66"> </iframe>
+</div>
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&amp;id=481535492&amp;auto=1&amp;height=66"> </iframe>
 
 ### 功能简述：一个账户登录，随机从题库中抽取10道选择题，开始考试，提交，批改分数。
 
