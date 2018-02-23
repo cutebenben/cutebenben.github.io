@@ -10,7 +10,7 @@ baseurl: '/wArrest.github.io'
 # Navigation links
 nav:
   首页: '/'
-  关于我: '/about.html'
+  关于: '/about.html'
   作品: '/work.html'
   分类: '/classify.html'
   归档: '/archive.html'
