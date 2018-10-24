@@ -1,11 +1,11 @@
 # Site settings 配置站点
 title: wArrest's blog
-description: '王路程，外号二狗，在校计算机专业大学生一枚，暂时不会啥高深的技术，但是很高兴可以在这里与你分享我对技术和生活的思考。'
-keyword: '王路程, 王路程的独立博客, 王路程的博客, 前端, 前端开发, 前端博客, javascript, php,vuejs, nodejs, 设计'
+description: '小笨笨，一个又可爱又神秘的人。喜欢hiphop，喜欢悠哉游哉的生活。。。'
+keyword: '郭博洋，大数据开发工程师'
 url: 'http://wArrest.github.io' # your host
 
 # if you don't need baseurl, you should leave this value blank.
-baseurl: '/wArrest.github.io'
+baseurl: '/cutebenben.github.io'
 
 # Navigation links
 nav:
@@ -21,9 +21,9 @@ footer:
   since: 2018
 
 # Author 配置博主信息
-author: '王路程'
-nickname: '二狗'
-bio: '大学生，热爱技术&热爱生活'
+author: '郭博洋'
+nickname: '小笨笨'
+bio: 'rapper，热爱技术&热爱生活'
 avatar: '/assets/img/profile.png'
 
 # Search
