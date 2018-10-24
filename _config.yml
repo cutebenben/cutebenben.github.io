@@ -62,11 +62,11 @@ postPatterns: 'food'
 
 # SNS settings 配置社交网站url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
 sns:
-  email: '1275591716@qq.com'
+  email: '732657335@qq.com'
   weibo: '//weibo.com/u/5754260018'
   juejin: '//juejin.im/user/57a6f434165abd006159b4cc'
   instagram: '//www.instagram.com/steveliaocn'
-  github: '//github.com/wArrest'
+  github: '//github.com/cutebenben'
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
